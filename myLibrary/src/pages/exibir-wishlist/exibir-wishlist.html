@@ -1,0 +1,45 @@
+<!--
+  Generated template for the ExibirWishlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color ="primary">
+    <ion-title>Lista de Desejos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (submit)="form_edit(f)" class="form-exibir">
+    <ion-list class="list-exibir-wishlist">
+      <ion-item class="item-exibir-wishlist">
+        <ion-label>Livro:</ion-label>
+        <ion-input type="text" disabled="true" [ngModel]="infoWishlist.nome" required ngModel name="nome" placeholder="Nome do Livro"></ion-input>
+      </ion-item>
+      <ion-item class="item-exibir-wishlist">
+        <ion-label>Autor(a):</ion-label>
+        <ion-input  type="text" disabled="true" [ngModel]="infoWishlist.autor" required ngModel name="autor" placeholder="Autor(a)"></ion-input>
+      </ion-item>
+      <ion-item class="item-exibir-wishlist">
+        <ion-label>Editora:</ion-label>
+        <ion-input  type="text" disabled="true"  [ngModel]="infoWishlist.editora" required ngModel name="editora" placeholder="Editora"></ion-input>
+      </ion-item>
+      <ion-item class="item-exibir-wishlist">
+        <ion-label>Idioma:</ion-label>
+        <ion-input  type="text" disabled="true" [ngModel]="infoWishlist.idioma" required ngModel name="idioma" placeholder="Idioma"></ion-input>
+      </ion-item>
+      <ion-item class="item-exibir-wishlist"> 
+          <ion-label>Edição:</ion-label>
+        <ion-input type="text" disabled="true" [ngModel]="infoWishlist.edicao" required ngModel name="edicao" placeholder="Edição"></ion-input>
+      </ion-item>
+      <ion-item class="item-date">
+          <ion-label>Ano:</ion-label>
+          <ion-datetime displayFormat="YYYY" disabled="true" [ngModel]="infoWishlist.ano" required ngModel name="ano" placeholder="XXXX"></ion-datetime>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

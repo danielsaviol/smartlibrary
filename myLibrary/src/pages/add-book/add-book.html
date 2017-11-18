@@ -1,0 +1,41 @@
+<!--
+  Generated template for the AddBookPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Adicionar Livro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup] = "booksForm" (ngSubmit)="form_submit()">
+      <ion-list class="list-wishlist">
+        <ion-item class="item-wishlist">
+          <ion-input type="text" formControlName='nome' placeholder="Nome do Livro"></ion-input>
+        </ion-item>
+        <ion-item class="item-wishlist">
+          <ion-input  type="text" formControlName='autor' placeholder="Autor(a)"></ion-input>
+        </ion-item>
+        <ion-item class="item-wishlist">
+          <ion-input  type="text" formControlName='editora' placeholder="Editora"></ion-input>
+        </ion-item>
+        <ion-item class="item-wishlist">
+          <ion-input  type="text" formControlName='idioma' placeholder="Idioma"></ion-input>
+        </ion-item>
+        <ion-item class="item-wishlist"> 
+          <ion-input type="text" formControlName='edicao' placeholder="Edição"></ion-input>
+        </ion-item>
+        <ion-item class="item-date">
+            <ion-label>Ano</ion-label>
+            <ion-datetime displayFormat="YYYY" formControlName='ano' placeholder="XXXX"></ion-datetime>
+        </ion-item>
+      </ion-list>
+      <button class="register" ion-button full color="primary" type="submit" [disabled]="!booksForm.valid"> Register </button>  
+    </form>
+  </ion-content>

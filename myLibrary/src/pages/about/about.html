@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Meus Livros
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="showAddBook()"> <ion-icon name="ios-add" ></ion-icon>
+       </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background-lista" >
+    <ion-list >
+    <ion-item-sliding *ngFor="let p of books | async">
+ 
+      <ion-item class="items-lista" (click)="presentActionSheet(p.nome,p.autor,p.editora,p.idioma,p.edicao,p.ano)">
+          <h2 class="books-title" >{{ p.nome }}</h2>
+          <p class="books-title"  >{{ p.autor }}</p>
+      </ion-item>
+      <ion-item-options side="right" class="option">
+        <button ion-button color="danger" class="trash-button" (click)="deleteItem(p.nome)" ><ion-icon name="ios-trash"></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+    </ion-list>
+
+  </ion-content>

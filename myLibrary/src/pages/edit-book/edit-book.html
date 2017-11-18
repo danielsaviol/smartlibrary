@@ -1,0 +1,41 @@
+<!--
+  Generated template for the EditBookPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Editar Livro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (submit)="form_edit(f)">
+    <ion-list class="list-edit-book">
+      <ion-item class="item-edit-book">
+        <ion-input type="text" [ngModel]="infoBook.nome" required ngModel name="nome" placeholder="Nome do Livro"></ion-input>
+      </ion-item>
+      <ion-item class="item-edit-book">
+        <ion-input  type="text" [ngModel]="infoBook.autor" required ngModel name="autor" placeholder="Autor(a)"></ion-input>
+      </ion-item>
+      <ion-item class="item-edit-book">
+        <ion-input  type="text" [ngModel]="infoBook.editora" required ngModel name="editora" placeholder="Editora"></ion-input>
+      </ion-item>
+      <ion-item class="item-edit-book">
+        <ion-input  type="text" [ngModel]="infoBook.idioma" required ngModel name="idioma" placeholder="Idioma"></ion-input>
+      </ion-item>
+      <ion-item class="item-edit-book"> 
+        <ion-input type="text" [ngModel]="infoBook.edicao" required ngModel name="edicao" placeholder="Edição"></ion-input>
+      </ion-item>
+      <ion-item class="item-date">
+          <ion-label>Ano</ion-label>
+          <ion-datetime displayFormat="YYYY" [ngModel]="infoBook.ano" required ngModel name="ano" placeholder="XXXX"></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <button class="register" ion-button full color="primary" type="submit" > Salvar </button>  
+  </form>
+</ion-content>
